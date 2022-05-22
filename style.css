@@ -1,0 +1,800 @@
+/*
+Theme Name: Samana Oceanview Wellness - Divi Child
+Template: Divi
+Author: Dusty Sun LLC
+Version: 1.0.3
+Updated: 2022-05-21
+*/
+/* smooch-regular - latin */
+@font-face {
+    font-family: 'Smooch';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/smooch-v5-latin-regular.woff2') format('woff2'); /* Super Modern Browsers */
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Italic.woff2') format('woff2'),
+        url('fonts/GlacialIndifference-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Bold.woff2') format('woff2'),
+        url('fonts/GlacialIndifference-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Regular.woff2') format('woff2'),
+        url('fonts/GlacialIndifference-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-family: 'Glacial Indifference', Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    /* font-family: 'Glacial Indifference', Arial, Helvetica, sans-serif; */
+}
+
+.script p,
+.script h1,
+.script h2,
+.script h3,
+.script h4,
+.script h5,
+.script h6 {
+    font-family: 'Smooch', Arial, Helvetica, sans-serif;
+}
+
+/** Main Menu**/
+
+body.home .home-link {
+    display: none !important;
+}
+/* Fix for touch on mobile - relies on JS too */
+.menu-item-has-children.hide-children:not(.et-touch-hover) .sub-menu {
+    opacity: 0;
+}
+@media (min-width: 768px) {
+    #main-menu ul.sub-menu {width: 420px;}
+
+    #main-menu ul.sub-menu li a {
+        width: 380px;
+        text-transform: capitalize;
+        font-size: 20px;padding: 5px 10px;
+    }
+}
+@media (max-width: 980px)  {
+    #main-menu.et_pb_menu .et_pb_menu__menu {
+        display: block !important;
+    }
+    #main-menu .et_mobile_nav_menu {
+        display: none !important;
+    }
+    .et_pb_sticky #main-menu.et_pb_menu  .et_pb_menu_inner_container>.et_pb_menu__logo-wrap .et_pb_menu__logo img, .et_pb_sticky #main-menu.et_pb_menu .et_pb_menu__logo-slot .et_pb_menu__logo-wrap img {
+        max-height: 100px;
+    }
+}
+@media (max-width: 767px) {
+    #main-menu.et_pb_menu ul li a {
+        font-size: 18px;
+        padding: 25px 0 0;
+    }
+    .et_pb_sticky #main-menu.et_pb_menu  .et_pb_menu_inner_container>.et_pb_menu__logo-wrap .et_pb_menu__logo img, .et_pb_sticky #main-menu.et_pb_menu .et_pb_menu__logo-slot .et_pb_menu__logo-wrap img {
+        max-height: 50px;
+    }
+    #main-menu.et_pb_menu  .et_pb_menu__menu>nav>ul>li>a:after {
+        top: 100%!important;
+        right: -18px !important;
+        transform: translateY(-100%);
+    }
+    #main-menu .menu-item-type-custom.menu-item-has-children {
+        position: static;
+        padding-right: 20px;
+    }
+    #main-menu ul.sub-menu {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+    #main-menu ul.sub-menu li {
+        display: block;
+
+    }
+    #main-menu ul.sub-menu li a {
+        width: 100%;
+        padding: 5px 0;
+
+        /* text-transform: capitalize; */
+        font-size: 16px;
+        /* padding: 5px 10px; */
+    }
+}
+/** Divi Bullet Styles **/
+.et_pb_text_inner ul li {
+    margin-bottom: 10px;
+}
+/* Home Buttons */
+.home #main-content .et_pb_button_module_wrapper.et_pb_module {
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+}
+@media(max-width: 767px) {
+    .home #main-content .et_pb_button_module_wrapper.et_pb_module {
+        display: block;
+        width: auto;
+        margin-right: 0 !important;
+    }
+}
+
+.et_pb_button_module_wrapper.et_pb_button_2_wrapper.et_pb_button_alignment_center.et_pb_module {}
+/** Divi Layouts **/
+@media(min-width: 981px) {
+    .et_pb_row.vertical-center {
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media(max-width: 980px) {
+    .reverse-columns-mobile {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+    .reverse-columns-mobile.et_pb_row .et_pb_column.et-last-child {
+        margin-bottom: 30px;
+    }
+}
+@media (min-width: 768px) and (max-width: 980px) {
+    .et_pb_gutters3 .desktop-layout-for-tablets .et_pb_column {
+        margin-right: 5.5%;
+        margin-bottom: 0;
+    }
+    .desktop-layout-for-tablets.et_pb_row {
+        width: 90%;
+        padding: 2% 0;
+    }
+    .desktop-layout-for-tablets .et_pb_column:last-child {
+        margin-right: 0 !important;
+    }
+    .et_pb_gutters3 .desktop-layout-for-tablets .et_pb_column_1_2 {
+        width: 47.25%;
+    }
+    .et_pb_gutters3 .desktop-layout-for-tablets .et_pb_column_1_3 {
+        width: 29.6667%;
+    }
+    .et_pb_gutters3 .desktop-layout-for-tablets .et_pb_column_1_4 {
+        width: 20.875%;
+    }
+    .desktop-layout-for-tablets .et_pb_column.et_pb_column_empty {
+        display: block;
+    }
+}
+.et_pb_row.vertical-center .et_pb_column,
+.vertical-center.et_pb_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Contact Form 7 */
+/* Loader */
+.wpcf7 form .ajax-loader {
+    background: url('data:image/svg+xml;utf8,');
+}
+/* Submit button */
+.wpcf7-submit {
+    padding: 6px 5px;
+    letter-spacing: 4px;
+    font-size: 16px;
+    background-color: rgb(215 160 75);
+    color: #fff !important;
+    font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border-radius: 0px;
+    border: 4px solid #d7a04b !important;
+    width: 100%;
+}
+.wpcf7-submit:hover {
+    background-image: initial!important;
+    background-color: #eacc84!important;
+    border-color: #4c4c4c !important;
+}
+/* input box styling */
+.wpcf7-form .wpcf7-date, .wpcf7-form .wpcf7-text, .wpcf7-form .wpcf7-textarea, .wpcf7-form .wpcf7-captchar, .wpcf7 .wpcf7-form select,
+.strong-form input[type="text"], .strong-form input[type="email"], .strong-form textarea {
+    /* font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif !important; */
+    border: 2px solid #25215e !important;
+    width: 100%;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    font-size: 16px;
+    color: #2b2b2b !important;
+    padding: 10px 15px !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    display: block;
+}
+.wpcf7-form .wpcf7-date {
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+}
+.wpcf7-form .wpcf7-date:focus,
+.wpcf7-form .wpcf7-text:focus,
+.wpcf7-form .wpcf7-textarea:focus,
+.wpcf7-form .wpcf7-captchar:focus,
+.wpcf7-form .wpcf7-select {
+    border: 2px solid #d7a04b !important;
+}
+/* Select styling */
+.wpcf7-form span.ds-wpcf7-select.wpcf7-form-control-wrap {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 2px solid #eee;
+    width: 100%;
+    border-radius: 0;
+    /*overflow: hidden;*/
+    background-color: #fff;
+    background: #fff;
+    position: relative;
+    color: #2b2b2b;
+}
+.wpcf7-form span.ds-wpcf7-select.wpcf7-form-control-wrap:hover {
+    border-color: #000;
+}
+.wpcf7-form span.ds-wpcf7-select.wpcf7-form-control-wrap:after {
+    top: 50%;
+    right: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    border-width: 5px;
+    margin-top: -2px;
+    z-index: 100;
+}
+.wpcf7-form span.ds-wpcf7-select.wpcf7-form-control-wrap select {
+    color: #2b2b2b;
+    font-size: 16px;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.wpcf7-form span.ds-wpcf7-select.wpcf7-form-control-wrap select::-ms-expand{
+      display: none;
+}
+.wpcf7-form span.ds-wpcf7-select.wpcf7-form-control-wrap select:focus {
+    outline: none;
+}
+.wpcf7-form span.ds-wpcf7-select.wpcf7-form-control-wrap select:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+}
+/* Not valid tips */
+.wpcf7-form span.wpcf7-not-valid-tip {
+    /* position: absolute; */
+    /* top: 26px; */
+    padding: 0 16px;
+    white-space: nowrap;
+    background-color: #ce0000;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+}
+.wpcf7-form span.wpcf7-form-control-wrap.ds-wpcf7-select span.wpcf7-not-valid-tip {
+    top: auto;
+    bottom:-12px;
+    left:-2px;
+}
+div.wpcf7-response-output {
+      margin-top: 15px;
+}
+
+.contact-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+.contact-flex .contact-half {
+    flex: 1 1 48%;
+    padding: 0 8px 6px;
+}
+.contact-flex .contact-third {
+    flex: 1 1 30%;
+    padding: 0 8px 6px;
+}
+.contact-flex .contact-full {
+    flex: 1 1 100%;
+    padding: 0 8px 6px;
+}
+.contact-flex label {
+    font-weight: 600;
+}
+
+@media (max-width: 767px) { 
+    .contact-flex .contact-half,
+    .contact-flex .contact-third {
+        flex-basis: 100%;
+    }
+    span.wpcf7-form-control.g-recaptcha.wpcf7-recaptcha iframe {transform: scale(0.7);transform-origin: 0 0;}
+
+}
+
+/** WP BOOKING **/
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .ui-datepicker-title *,
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .wc-appointments-appointment-hook.wc-appointments-appointment-hook-after *{
+    font-family: 'Glacial Indifference', Arial, Helvetica, sans-serif;
+    color: #070707;
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .ui-datepicker-title * {
+    font-size: 30px;
+    font-weight: 600;
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form {
+    padding: 0;
+    border: none;
+}
+.product-type-appointment .price {
+    display: none;
+}
+.wc-appointments-date-picker .ui-datepicker td {
+    border: 1px solid #eaeaea !important;
+    border-collapse: separate;
+}
+.wc-appointments-date-picker .ui-datepicker td:not(.ui-datepicker-current-day) a.ui-state-active, 
+.wc-appointments-date-picker .ui-datepicker td:not(.ui-datepicker-current-day) a.ui-state-active.ui-state-hover,
+.wc-appointments-date-picker td:not(.past_day).appointable .ui-state-default,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.not_appointable.highlighted_day .ui-state-default {
+    /* background-color: #3e7a03; */
+    border: 5px solid rgba(0, 0, 0, 0);
+}
+.wc-appointments-date-picker td.fully_scheduled.ui-state-disabled,
+.wc-appointments-date-picker td.not_appointable.appointable {
+    opacity: 1;
+}
+.wc-appointments-date-picker td.ui-datepicker-week-end.past_day ~ .not_appointable,
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable ~ .not_appointable,
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable:not(:last-child) {
+    opacity: .35;
+}
+.wc-appointments-date-picker td.ui-datepicker-week-end.past_day ~ .not_appointable .ui-state-default:after {
+    display: none;
+}
+.wc-appointments-date-picker td:not(.past_day).not_appointable .ui-state-default {
+    background-color: #ffffff;
+    opacity: 1;
+    border: 5px solid rgba(0, 0, 0, 0);
+    color: #000;
+}
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable:first-child .ui-state-default,
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable ~ .not_appointable .ui-state-default {
+    border: none;
+}
+.wc-appointments-date-picker td:not(.past_day).not_appointable .ui-state-default 
+.wc-appointments-date-picker .ui-datepicker td.fully_scheduled span:before {
+    display: none;
+}
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.not_appointable .ui-state-default:after,
+.wc-appointments-date-picker td.fully_scheduled .ui-state-default:after,
+.wc-appointments-date-picker td:not(.past_day).not_appointable .ui-state-default:after,
+.wc-appointments-date-picker td:not(.past_day).appointable .ui-state-default:after {
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 15px;
+    margin: 5px auto 0;
+    height: 15px;
+    padding: 0 4px;
+}
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable:first-child .ui-state-default:before,
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable ~ .not_appointable .ui-state-default:before,
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable:first-child .ui-state-default:after,
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable ~ .not_appointable .ui-state-default:after {
+    display: none !important;
+}
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable:first-child,
+.wc-appointments-date-picker td.ui-datepicker-week-end.not_appointable ~ .not_appointable {
+    pointer-events: none;
+}
+.wc-appointments-appointment-cost {
+    display: none !important;
+}
+.product-type-appointment .product_meta {
+    display: none;
+}
+.wc-appointments-date-picker td:not(.past_day).appointable .ui-state-default:hover {
+    background-color: #ebf3f4;
+    z-index: 9;
+}
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.appointable .ui-state-default,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-current-day.appointable .ui-state-default,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.appointable .ui-state-default:hover {
+    background-color: #fff;
+    color: #000;
+    font-weight: 800;
+    border: 5px solid #000;
+    box-sizing: border-box;
+}
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.appointable .ui-state-default:after,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-current-day.appointable .ui-state-default:after,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.appointable .ui-state-default:hover:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
+}
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.fully_scheduled .ui-state-default,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-current-day.fully_scheduled .ui-state-default,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.fully_scheduled .ui-state-default:hover,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.not_appointable .ui-state-default,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-current-day.not_appointable .ui-state-default,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.not_appointable .ui-state-default:hover {
+    background-color: #25215E;
+    color: #d7a04b;
+    font-weight: 800;
+    box-sizing: border-box;
+}
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.fully_scheduled .ui-state-default:after,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-current-day.fully_scheduled .ui-state-default:after,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.fully_scheduled .ui-state-default:hover:after,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.not_appointable .ui-state-default:after,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-current-day.not_appointable .ui-state-default:after,
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.not_appointable .ui-state-default:hover:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='check' class='svg-inline--fa fa-check fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
+
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form-button.single_add_to_cart_button.button,
+.woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled] {
+    color: #FFFFFF!important;
+    border-width: 0px!important;
+    border-radius: 24px !important;
+    font-size: 24px;
+    background-color: #D7A04B !important;
+    border: 2px solid transparent;
+    font-weight: 500;
+    padding: 0.3em 2em 0.3em 0.7em;
+    line-height: 1.7em!important;
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form-button.single_add_to_cart_button.button:after{
+    opacity: 1;
+    margin-left: 0;
+    font-size: 1.6em;
+}
+
+/* .woocommerce button.button:disabled:after, .woocommerce button.button:disabled[disabled]:after  */
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form-button.single_add_to_cart_button.button:hover {
+    background-color: #25215E;
+    padding: 0.3em 2em 0.3em 0.7em;
+
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form-button.single_add_to_cart_button.button:hover:after{
+    /* font-size: 1.6em; */
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .slot-picker .slot_row {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .slot-picker ul.slot_column {
+    flex: 1 1 30%;
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .slot-picker li.slot_heading {
+    font-size: 22px;
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .slot-picker li.slot a {
+    font-size: 18px;
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .slot-picker li.slot.selected a, .wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .slot-picker li.slot.selected:hover a {
+    background-color: #3e7a03;
+}
+.wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.ui-datepicker-current-day.appointable .ui-state-default {
+    background-color: #25215E !important;
+    color: #d7a04b !important;
+    font-weight: 800 !important;
+    border: 5px solid rgba(0, 0, 0, 0);
+    position: static;
+}
+.wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.ui-datepicker-current-day.appointable .ui-state-default:before {
+    content: '3-4P Check In';
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    color: #25215e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    justify-content: center;
+    background-color: #d7a04b;
+    border: 5px solid #d7a04b;
+    border-radius: 0;
+    font-size: 12px;
+    line-height: 12px;
+    box-sizing: border-box;
+    z-index: 9;
+}
+.wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.weekday-6.appointable.highlighted_day.ui-datepicker-selected-day .ui-state-default:before {
+    content: '11-12P Checkout';
+    position: absolute;
+    top: -35px;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    color: #25215e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    justify-content: center;
+    background-color: #d7a04b;
+    border: 5px solid #d7a04b;
+    border-radius: 0;
+    font-size: 12px;
+    line-height: 12px;
+    box-sizing: border-box;
+}
+@media (max-width: 480px) {
+    .wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.ui-datepicker-current-day.appointable .ui-state-default:before,
+    .wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.weekday-6.appointable.highlighted_day.ui-datepicker-selected-day .ui-state-default:before {
+        display: none;
+    }
+}
+
+.wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.ui-datepicker-checkout-day.appointable .ui-state-default:after {
+    display: none;
+}
+.wc-appointments-date-picker .picker[data-product_id="178"] .ui-datepicker td.ui-datepicker-checkout-day.appointable {
+    vertical-align: bottom;
+}
+.wc-appointments-date-picker .picker[data-product_id="178"] .ui-datepicker td.ui-datepicker-checkout-day.appointable .ui-state-default:hover {
+    position: static;
+
+}
+.wc-appointments-appointment-hook.wc-appointments-appointment-hook-after {
+    padding-top: 26px;
+}
+.wc-appointments-appointment-hook label,
+.wc-appointments-appointment-hook input {
+    font-size: 20px !important;
+}
+.sov-start-addon-fields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .wc-appointments-appointment-hook.wc-appointments-appointment-hook-after .wc-pao-addon {
+    flex: 1 1 50%;
+    padding: 0 10px;
+    margin: 0 !important;
+}
+.wc-appointments-appointment-form-wrap .wc-appointments-appointment-form .wc-appointments-appointment-hook.wc-appointments-appointment-hook-after .wc-pao-addon.wc-pao-addon-choose-your-package {
+    flex-basis: 100%;
+}
+
+.wc-appt-checkin-checkout-dates {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.wc-appt-checkin-date,
+.wc-appt-checkout-date { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.sov-wc-appt-label { 
+    /* flex: 0 0 95px; */
+    flex: 1 1 100%;
+    font-weight: 600;
+}
+.wc-pao-addon-container.wc-pao-addon.wc-pao-addon-package {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+}
+.wc-pao-addon-name .required {
+    display: none;
+}
+
+/* WOOCOMMERCE CHECKOUT */
+.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover {
+    background-color: #b56231;
+    color: #fff;
+}
+.woocommerce-message {
+    /* font-weight: 400; */
+}
+.woocommerce-message a {
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 5px 20px;
+}
+.woocommerce-message a:hover {
+    background-color: #fff;
+    color: #b56231;
+}
+/** WooCommerce Checkout **/
+.woocommerce-checkout .checkout .col-1,
+.woocommerce-checkout .checkout .col-2 {
+    margin-bottom: 0 !important;
+}
+.woocommerce-checkout.woocommerce form .form-row input.input-text {
+    font-size: 16px;
+}
+#order_review_heading {
+    display: none;
+}
+#order_review {
+    margin-top: 5px;
+}
+#order_review table.shop_table, 
+#order_review table.shop_table td {
+    border: none;
+}
+#order_review table.shop_table tfoot,
+#order_review .product-total {
+    display: none;
+}
+
+#order_review .product-name {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between; */
+}
+.woocommerce table.shop_table.woocommerce-checkout-review-order-table {
+    margin-bottom: 0 !important;
+}
+.woocommerce-checkout-review-order-table .product-name-left {
+    position: relative;
+}
+.woocommerce-checkout-review-order-table .product-name-left .wc-checkout-thumbnail {
+    min-height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+}
+.woocommerce-checkout-review-order-table .product-name-middle {
+    text-align: center;
+    margin-top: 20px;
+}
+.woocommerce-checkout-review-order-table .product-name-bottom {
+    margin-top: 40px;
+    position: relative;
+    padding: 0 30px;
+}
+.woocommerce-checkout-review-order-table .product-name-bottom:before {
+    content: '';
+    border-top: 1px solid #888888;
+    position: absolute;
+    top: -20px;
+    width: calc(100% - 60px);
+    left: 30px;
+
+}
+.et_pb_wc_checkout_shipping {
+    display: none;
+}
+.woocommerce-checkout-review-order-table .product_name {
+    /* font-weight: 800;
+    letter-spacing: 0.5px;
+    font-size: 36px;
+    line-height: 1.2em;
+    display: block;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.4); */
+    display: none;
+}
+.woocommerce-checkout-review-order-table .product-quantity, 
+.woocommerce-checkout-review-order-table .variation-Providers,
+.woocommerce-checkout-review-order-table .variation-Duration,
+.woocommerce-checkout-review-order-table .variation-Date,
+.woocommerce-checkout-review-order-table .variation-Time {
+    display: none !important;
+}
+.checkout-details-header {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: -10px;
+}
+#order_review_heading {
+    margin-top: 0;
+}
+#left-area {
+    padding-top: 0 !important;
+}
+#order_review {
+    /* margin-bottom: 60px; */
+}
+#order_review th.product-name, 
+#order_review th.product-total {
+    display: none;
+}
+.woocommerce-table--order-details .product-quantity,
+.woocommerce-table--order-details th.woocommerce-table__product-table.product-total,
+.woocommerce-table--order-details th.woocommerce-table__product-name.product-name{
+    display: none;
+}
+.woocommerce-checkout ul.wc_payment_methods.payment_methods.methods {
+    display: none;
+}
+/** WooCommerce Receipt **/
+.woocommerce-order-overview__total,
+.woocommerce-order-overview__payment-method {
+    display: none;
+}
+.woocommerce ul.order_details li.woocommerce-order-overview__email {
+    border-right: none;
+}
+.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
+    margin-bottom: 0;
+    padding-left: 0 !important;
+}
+.woocommerce-order-received .woocommerce-table--order-details {
+    margin-bottom: 0 !important;
+}
+.woocommerce-order-received .woocommerce-order-details {
+    margin: 30px 0 20px;
+}
+
+.woocommerce-order-received .woocommerce-table--order-details .woocommerce-table__product-total, 
+.woocommerce-order-received .woocommerce-table--order-details tfoot {
+    display: none;
+}
+.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
+    font-size: 24px;
+}
+.woocommerce-order-details .wc-appointment-summary-name {
+    display: none;
+}
+.woocommerce-order-received #checkout-right {
+    max-width: 600px;
+    margin: 0 auto !important;
+    font-size: 20px;
+}
