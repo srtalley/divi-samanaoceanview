@@ -2,7 +2,7 @@
 Theme Name: Samana Oceanview Wellness - Divi Child
 Template: Divi
 Author: Dusty Sun LLC
-Version: 1.0.5
+Version: 1.0.5a
 Updated: 2022-06-15
 */
 /* smooch-regular - latin */
@@ -805,7 +805,15 @@ div.wpcf7-response-output {
     display: none;
 }
 .woocommerce-order-received #checkout-right {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto !important;
     font-size: 20px;
+}
+.woocommerce-order-received .wc-appointment-summary {
+    margin-bottom: 20px !important;
+}
+
+.woocommerce-order-received .wc-item-meta li,
+.woocommerce-order-received .wc-item-meta li p {
+    line-height: 1em !important;
 }
