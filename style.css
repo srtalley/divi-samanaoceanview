@@ -2,8 +2,8 @@
 Theme Name: Samana Oceanview Wellness - Divi Child
 Template: Divi
 Author: Dusty Sun LLC
-Version: 1.0.4.1
-Updated: 2022-05-21
+Version: 1.0.5
+Updated: 2022-06-15
 */
 /* smooch-regular - latin */
 @font-face {
@@ -455,7 +455,9 @@ div.wpcf7-response-output {
 .wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.fully_scheduled .ui-state-default:hover,
 .wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.not_appointable .ui-state-default,
 .wc-appointments-date-picker .ui-datepicker td.ui-datepicker-current-day.not_appointable .ui-state-default,
-.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.not_appointable .ui-state-default:hover {
+.wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.not_appointable .ui-state-default:hover,
+.wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker tr.next-week td.ui-datepicker-week-end:first-child .ui-state-default,
+.wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker tr.next-week td.ui-datepicker-week-end:first-child .ui-state-default:hover {
     background-color: #25215E;
     color: #d7a04b;
     font-weight: 800;
@@ -515,7 +517,7 @@ div.wpcf7-response-output {
     background-color: #3e7a03;
 }
 .wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.ui-datepicker-current-day.appointable .ui-state-default {
-    background-color: #25215E !important;
+    background-color: #25215e !important;
     color: #d7a04b !important;
     font-weight: 800 !important;
     border: 5px solid rgba(0, 0, 0, 0);
@@ -524,9 +526,9 @@ div.wpcf7-response-output {
 .wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.ui-datepicker-current-day.appointable .ui-state-default:before {
     content: '3-4P Check In';
     position: absolute;
-    bottom: -35px;
+    bottom: 0;
     left: 0;
-    height: 35px;
+    height: 30px;
     width: 100%;
     color: #25215e;
     display: flex;
@@ -542,12 +544,13 @@ div.wpcf7-response-output {
     box-sizing: border-box;
     z-index: 9;
 }
-.wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.weekday-6.appointable.highlighted_day.ui-datepicker-selected-day .ui-state-default:before {
+/* .wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker td.weekday-6.appointable.highlighted_day.ui-datepicker-selected-day .ui-state-default:before */
+.wc-appointments-date-picker  .picker[data-product_id="178"] .ui-datepicker tr.next-week td.ui-datepicker-week-end:first-child .ui-state-default:before {
     content: '11-12P Checkout';
     position: absolute;
-    top: -35px;
+    bottom: 0;
     left: 0;
-    height: 35px;
+    height: 30px;
     width: 100%;
     color: #25215e;
     display: flex;
