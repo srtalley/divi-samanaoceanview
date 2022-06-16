@@ -2,7 +2,7 @@
 Theme Name: Samana Oceanview Wellness - Divi Child
 Template: Divi
 Author: Dusty Sun LLC
-Version: 1.0.5a
+Version: 1.0.5b
 Updated: 2022-06-15
 */
 /* smooch-regular - latin */
@@ -462,7 +462,9 @@ div.wpcf7-response-output {
     color: #d7a04b;
     font-weight: 800;
     box-sizing: border-box;
+    position: static;
 }
+
 .wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.fully_scheduled .ui-state-default:after,
 .wc-appointments-date-picker .ui-datepicker td.ui-datepicker-current-day.fully_scheduled .ui-state-default:after,
 .wc-appointments-date-picker .ui-datepicker td.ui-datepicker-selected-day.fully_scheduled .ui-state-default:hover:after,
